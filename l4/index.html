@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JS Data Test</title>
+</head>
+<body>
+    <header>
+        <h1>JS Data Test</h1>
+    </header>
+    <main>
+        <form action="">
+            <label for="username">Please enter your username</label>
+            <input style="display: block; margin-top: 4px;" type="text" id="username">
+            <label for="email">Please enter your email</label>
+            <input style="display: block; margin-top: 4px;" type="email" id="email">
+            <label for="message">Please enter your message</label>
+            <textarea style="display: block; margin-top: 4px;" type="text" id="message" name="message"></textarea>
+            <button style="display: block; margin-top: 10px;" type="button" onclick="getData()">Get form data to span</button>
+        </form>
+        <div class="message">
+            <h2>Sender:</h2>
+            <span id="writeSender"></span>
+            <h2>E-mail:</h2>
+            <span id="writeEmail"></span>
+            <h2>Message:</h2>
+            <span id="writeMessage"></span>
+        </div>
+    </main>
+    <script>
+        const getData = () => {
+            let usernameData = document.getElementById("username").value;
+            let emailData = document.getElementById("email").value;
+            let messageData = document.getElementById("message").value;
+            document.getElementById("writeSender").innerHTML = usernameData;
+            document.getElementById("writeEmail").innerHTML = emailData;
+            document.getElementById("writeMessage").innerHTML = messageData;
+        }
+    </script>
+</body>
+</html>
